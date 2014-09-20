@@ -1,5 +1,7 @@
 package controllers;
 
+import java.util.ArrayList;
+
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -20,5 +22,24 @@ public class StationController extends Controller {
 			return badRequest(errorNode);
 		}
 	}
+	
+//	public static Result getPath(String source, String destination) {
+//		try {
+////			/path?source={source}&destination={destination}
+//			
+//			ArrayList resultList = new ArrayList<>();
+//			ObjectNode result = Json.newObject();
+//			result.put("lat", 12.9667);
+//			result.put("lon", "SBC");
+//			resultList.add(result);
+//			result = Json.newObject();
+//			
+//			return ok(result);
+//		} catch (Exception e) {
+//			ObjectNode errorNode = Json.newObject();
+//			errorNode.put("message", "Invalid input");
+//			return badRequest(errorNode);
+//		}
+//	}
 
 }
