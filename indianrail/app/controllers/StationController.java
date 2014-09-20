@@ -30,46 +30,44 @@ public class StationController extends Controller {
 
 			ArrayList resultList = new ArrayList<>();
 			ObjectNode result = Json.newObject();
-//			{"latA":12.9715986,
-//				"lngA":77.5945663,
-//				"latB":15.3647079,
-//				"lngB":75.1239548,
-//				"stationA":"Bangalore",
-//				"stationB":"Hubli",
+//			{"lat":12.9715986,
+//				"lng":77.5945663,
+//				"name":"Bangalore",
 //				"train":"Shatabdi Express",
 //				"order":1
 //				},
-//				{"latA":15.3647079,
-//				"lngA":75.1239548,
-//				"latB":15.465067,
-//				"lngB":75.003481,
-//				"stationA":"Hubli",
-//				"stationB":"Dharwad",
+//				{
+//				"lat":15.3647079,
+//				"lng":75.1239548,
+//				"name":"Hubli",
 //				"train":"Intercity Express",
 //				"order":2
+//				},
+//				{"lat":15.465067,
+//				"lng":75.003481,
+//				"name":"Dharwad",
+//				"order"
 //				}
-			result.put("latA", 12.9715986);
-			result.put("lngA", 77.5945663);
-			
-			result.put("latB", 15.3647079);
-			result.put("lngB", 75.1239548);
-			result.put("stationA", "Bangalore");
-			result.put("stationB", "Hubli");
+			result.put("lat", 12.9715986);
+			result.put("lng", 77.5945663);
+			result.put("name", "Bangalore");
 			result.put("train", "Shatabdi Express");
 			result.put("order", 1);
 			resultList.add(result);
-			result = Json.newObject();
-			result.put("latA", 15.3647079);
-			result.put("lngA", 75.1239548);
 			
-			result.put("latB", 15.465067);
-			result.put("lngB", 75.003481);
-			result.put("stationA", "Hubli");
-			result.put("stationB", "Dharwad");
+			result = Json.newObject();
+			result.put("lat", 15.3647079);
+			result.put("lng", 75.1239548);
+			result.put("name", "Hubli");
 			result.put("train", "Intercity Express");
 			result.put("order", 2);
 			resultList.add(result);
-
+			result = Json.newObject();
+			result.put("lat", 15.465067);
+			result.put("lng", 75.003481);
+			result.put("name", "Dharwad");
+			result.put("order", 3);
+			resultList.add(result);
 			ObjectMapper mapper = new ObjectMapper();
 			JsonNode userNode = mapper.convertValue(resultList, JsonNode.class);
 			return ok(userNode);
