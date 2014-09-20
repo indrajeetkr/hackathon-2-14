@@ -14,7 +14,7 @@ public class StationController extends Controller {
 		try {
 			ObjectNode result = Json.newObject();
 			result.put("station_name", "Bangalore");
-			result.put("station_code", "SBC");
+//			result.put("station_code", "SBC");
 			return ok(result);
 		} catch (Exception e) {
 			ObjectNode errorNode = Json.newObject();
@@ -30,9 +30,15 @@ public class StationController extends Controller {
 //			ArrayList resultList = new ArrayList<>();
 //			ObjectNode result = Json.newObject();
 //			result.put("lat", 12.9667);
-//			result.put("lon", "SBC");
+//			result.put("lon", 77.5667);
+//			result.put("station_name", "Bangalore");
+//			result.put("station_code", "SBC");
 //			resultList.add(result);
 //			result = Json.newObject();
+//			result.put("lat", 18.5203);
+//			result.put("lon", 77.5667);
+//			result.put("station_name", "Bangalore");
+//			result.put("station_code", "SBC");
 //			
 //			return ok(result);
 //		} catch (Exception e) {
